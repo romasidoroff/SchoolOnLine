@@ -5,6 +5,7 @@ public class Main {
         Lectures firstLectures = new Lectures();
         Lectures secondLectures = new Lectures();
         Lectures thirdLectures = new Lectures();
+        Lectures fourthLectures = new Lectures();
 
         System.out.println(Lectures.counter);
     }
