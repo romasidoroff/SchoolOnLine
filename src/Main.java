@@ -6,6 +6,8 @@ public class Main {
         Lectures secondLectures = new Lectures();
         Lectures thirdLectures = new Lectures();
         Lectures fourthLectures = new Lectures();
+        Lectures fifthLectures = new Lectures();
+
 
         System.out.println(Lectures.counter);
     }
