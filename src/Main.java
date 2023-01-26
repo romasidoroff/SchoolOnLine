@@ -1,28 +1,35 @@
-import com.academy.models.Courses;
 import com.academy.models.Lectures;
-import com.academy.servise.LecturesService;
+import com.academy.servise.MainService;
+
+import static com.academy.models.Lectures.createLectures;
+
 
 public class Main {
+
+
+
     public static void main(String[] args) {
-        //Lectures firstLectures = new Lectures();
-        //Lectures secondLectures = new Lectures();
-        //Lectures thirdLectures = new Lectures();
-        //Lectures fourthLectures = new Lectures();
-        //Lectures fifthLectures = new Lectures();
 
 
-        //System.out.println(Lectures.counter);
-        //}
+        Lectures lectures = createLectures(1, 1, "name");
+        Lectures lecturesSecond = createLectures(2, 1,"name");
+        Lectures lecturesThird = createLectures(3, 1,"name");
+        Lectures lecturesForth = createLectures(4, 1,"name");
+        Lectures lecturesFifth = createLectures(5, 1,"name");
+        Lectures lecturesSix = createLectures(6, 1,"name");
 
-        Courses courses = new Courses(1);
-        Lectures lectures = Lectures.createLectures(1, 1);
-        Lectures lecturesSecond = Lectures.createLectures(2,1);
-        Lectures lecturesThird = Lectures.createLectures(3, 1);
-        Lectures lecturesForth = Lectures.createLectures(4, 1);
-        Lectures lecturesFifth = Lectures.createLectures(5, 1);
-        Lectures lecturesSix = Lectures.createLectures(6, 1);
-        long countCreatedLectures = lectures.getID();
-        System.out.println(lecturesSix.coursesID);
-        System.out.println(countCreatedLectures);
+
+        MainService.choose();
     }
 }
+
+
+
+
+
+
+
+
+
+
+

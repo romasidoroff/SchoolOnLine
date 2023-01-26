@@ -2,29 +2,44 @@ package com.academy.models;
 
 public class Lectures {
     private static long ID;
+    public static String name;
     public long coursesID;
 
-        public  Lectures(long ID, long coursesID) {
+        public  Lectures(long ID, long coursesID, String name) {
         this.ID = ID;
         this.coursesID = coursesID;
-    }
-        public static Lectures createLectures(long ID, long coursesID) {
-        return new Lectures(ID, coursesID);
+        this.name = name;
+        }
+
+
+
+    @Override
+    public String toString() {
+        return "New Lections number " + ID + " courses number"+ coursesID + "  new name";
     }
 
-    public long getID() {
+    public static  Lectures createLectures(long ID, long coursesID, String name) {
 
-        return this.ID;
+            return new Lectures(ID, coursesID, name);
+    }
+
+
+
+    public static long getID() {
+
+        return ID;
     }
         public static long counter;
         private HomeWorks homeworks;
         private AdditionalMaterials additionalMaterials;
 
-    public Lectures() {
+   public Lectures() {
+
         ID = counter++;
     }
 
-    }
+
+}
 
 
 
