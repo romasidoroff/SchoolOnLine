@@ -4,13 +4,15 @@ import com.academy.models.Lectures;
 
 import java.util.Scanner;
 
+import static com.academy.models.Lectures.ID;
 import static com.academy.models.Lectures.counter;
 
 
 public class MainService {
     public static com.academy.models.Lectures lectures;
 
-    static Scanner scanner = new Scanner(System.in);
+
+    public static Scanner scanner = new Scanner(System.in);
 
     public static void chooseNext() {
         int answer;
@@ -20,7 +22,13 @@ public class MainService {
             answer = scanner.nextInt();
             switch (answer) {
                 case 1 -> {
-                    System.out.println(new Lectures(counter++ + 7, 1, "new name"));
+                    System.out.println("Enter name");
+                    String lecturesName = scanner.next();
+                    System.out.println(new Lectures(counter++ + 7, 1, lecturesName));
+                    if (ID == 8){
+                        System.out.println("Goodbye. See you next time.");
+                        System.exit(0);
+                    }
                 }
                 case 2 -> System.out.println("return to select category");
                 default -> System.out.println(" wrong print ");

@@ -1,21 +1,24 @@
 package com.academy.models;
 
+
 public class Lectures {
-    private static long ID;
+
+    public static long ID;
     public static String name;
     public long coursesID;
+    public static  String lecturesName;
 
-        public  Lectures(long ID, long coursesID, String name) {
+        public  Lectures(long ID, long coursesID, String lecturesName) {
         this.ID = ID;
         this.coursesID = coursesID;
-        this.name = name;
+        this.lecturesName = lecturesName;
         }
 
 
 
     @Override
     public String toString() {
-        return "New Lections number " + ID + " courses number"+ coursesID + "  new name";
+            return "New Lectures number:" + ID + " courses number:"+ coursesID + " name:" + lecturesName;
     }
 
     public static  Lectures createLectures(long ID, long coursesID, String name) {
